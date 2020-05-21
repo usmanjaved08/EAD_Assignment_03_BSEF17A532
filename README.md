@@ -12,5 +12,5 @@ Build With: This Project is build with
 --> Linq to Sql is used
 Authors:
 --> Muhammad Usman Javed - BSEF17A532
-Acklnowledgements:
+Acknowledgements:
 My Course Instructor: Sir Waqas Riaz
