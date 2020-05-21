@@ -1,0 +1,292 @@
+﻿@{
+    ViewBag.Title = "Enter the follwoing details to Add a Mosque";
+}
+<h2 style="color:Green;">@ViewBag.Title</h2>
+<style>
+    .Button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+<style>
+    div {
+        background-image: url(Mosque.jpg);
+    }
+</style>
+<div class="container">
+    <form action="/home/Add" method="Post" text-align: center>
+        <label><b>Mosque Name   :   </b></label><input type="text" name="MosqueName" required placeholder="Enter Mosque Name"><br><br>
+        <label><b>Mosque Address:</b></label><input type="text" name="MosqueAddress" required placeholder="Enter Mosque Address"><br><br>
+        <label><b>Mosque Area   :</b></label><input type="text" name="area" required id="Area" placeholder="Enter Area"><br><br>
+        <h4><b>Select Prayer Times:</b></h4>
+
+        <b>Fajar:</b>
+        <b>Hours:</b>
+        <select name="FajarHours">
+            @{
+                for (int i = 0; i <= 12; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+        <b>Minutes:</b>
+        <select name="FajarMinutes">
+            @{
+                for (int i = 0; i < 60; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+
+
+                }
+            }
+        </select>
+        <select name="Fajarmeridium">
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+
+        <br><br />
+            <b>Zuhar:</b>
+        <b>Hours:</b>
+        <select name="ZuharHours">
+            @{
+                for (int i = 0; i <= 12; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+        <b>Minutes:</b>
+        <select name="ZuharMinutes">
+            @{
+                for (int i = 0; i < 60; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+
+        <select name="ZuharMeridium">
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+        <br><br />
+            <b>Asar:</b>
+        <b>Hours:</b>
+        <select name="AsarHours">
+            @{
+                for (int i = 0; i <= 12; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+        <b>Minutes:</b>
+        <select name="AsarMinutes">
+            @{
+                for (int i = 0; i < 60; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+
+        <select name="AsarMeridium">
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+        <br><br />
+            <b>Maghrib:</b>
+            <b>Hours:</b>
+        <select name="MaghribHours">
+            @{
+                for (int i = 0; i <= 12; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+        <b>Minutes:</b>
+        <select name="MaghribMinutes">
+            @{
+                for (int i = 0; i < 60; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+
+        <select name="MaghribMeridium">
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+
+        <br><br />
+        <b>Isha:</b>
+            <b>Hours:</b>
+        <select name="IshaHours">
+            @{
+                for (int i = 0; i <= 12; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+        <b>Minutes:</b>
+        <select name="IshaMinutes">
+            @{
+                for (int i = 0; i < 60; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+
+        <select name="IshaMeridium">
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+        <br><br />
+            <b>Jumma:</b>
+            <b>Hours:</b>
+        <select name="JummaHours">
+            @{
+                for (int i = 0; i <= 12; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+        <b>Minutes:</b>
+        <select name="JummaMinutes">
+            @{
+                for (int i = 0; i < 60; i++)
+                {
+                    if (i.ToString().Length == 1)
+                    {
+                        string n = "0" + i.ToString();
+                        <option name="@n">@n</option>
+                    }
+                    else
+                    {
+                        <option name="@i">@i</option>
+                    }
+                }
+
+            }
+        </select>
+
+        <select name="JummaMeridium">
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+        <br />
+        <br />
+        <input class="Button" type="submit" value="Click here to Add Mosque" />
+    </form>
+</div>

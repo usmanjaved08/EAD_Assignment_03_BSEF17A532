@@ -1,0 +1,29 @@
+﻿@model List<System.String>
+@{
+    ViewBag.Title = "Home Page";
+}
+<h1 style="color:Green;">Welcome To Prayers Schedule Management System</h1>
+<h2 style="text-align:center"> Please Select an Area</h2>
+<select name="Area" id="AreaSelector" style="margin-left: 44%">
+   <option>--Select any Area--</option>
+    @{
+        foreach(var a in Model)
+        {
+            <option value="@a">
+                @a
+            </option>
+
+        }
+    }
+</select>
+
+
+
+<div id="MosqueTable"></div>
+<script>
+    $('#AreaSelector').change(function (){
+       // debugger;
+        var value = $('#AreaSelector').val();
+        $('#MosqueTable').load('home/Category?cat=' + value);
+    });
+ </script>

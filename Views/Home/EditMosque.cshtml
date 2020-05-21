@@ -1,0 +1,296 @@
+﻿@model EAD_Assignment_No_3.Models.MosqueList
+@{
+    ViewBag.Title = "Edit";
+}
+<h2 style="color:Green;">Edit Mosque Details</h2>
+<style>
+    .Button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+<form action="/home/EditDone/@Model.Id" method="Post">
+    Mosque Name:<input type="text" name="MosqueName" required value=@Model.Name.ToString().Replace(" ","-")><br><br>
+    Mosque Address:<input type="text" name="MosqueAddress" required value=@Model.Address><br><br>
+    Area:<input type="text" name="area" required id="Area" value=@Model.Area><br><br>
+    Select Prayer Times:
+    <br><br />
+    <p><b>Previous Fajar Time is: @Model.Fajar</b></p>
+    Fajar:
+    Hours:
+    <select name="FajarHours">
+        @{
+            for (int i = 0; i <= 12; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+    Minutes:
+    <select name="FajarMinutes">
+        @{
+            for (int i = 0; i < 60; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+
+
+            }
+        }
+    </select>
+    <select name="Fajarmeridium">
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+
+    <br><br />
+    <p><b>Previous Zuhar Time is: @Model.Zuhar</b></p>
+    Zuhar:
+    Hours:
+    <select name="ZuharHours">
+        @{
+            for (int i = 0; i <= 12; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+    Minutes:
+    <select name="ZuharMinutes">
+        @{
+            for (int i = 0; i < 60; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+
+    <select name="ZuharMeridium">
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+    <br><br />
+    <p><b>Previous Asar Time is: @Model.Asar</b></p>
+    Asar:
+    Hours:
+    <select name="AsarHours">
+        @{
+            for (int i = 0; i <= 12; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+    Minutes:
+    <select name="AsarMinutes">
+        @{
+            for (int i = 0; i < 60; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+
+    <select name="AsarMeridium">
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+    <br><br />
+
+    <p><b>Previous Maghrib Time is: @Model.Maghrib</b></p>
+    Maghrib:
+    Hours:
+    <select name="MaghribHours">
+        @{
+            for (int i = 0; i <= 12; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+    Minutes:
+    <select name="MaghribMinutes">
+        @{
+            for (int i = 0; i < 60; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+
+    <select name="MaghribMeridium">
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+
+    <br><br />
+    <p><b>Previous Isha Time is: @Model.Isha</b></p>
+
+    Isha:
+    Hours:
+    <select name="IshaHours">
+        @{
+            for (int i = 0; i <= 12; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+    Minutes:
+    <select name="IshaMinutes">
+        @{
+            for (int i = 0; i < 60; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+
+    <select name="IshaMeridium">
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+    <br><br />
+    <p><b>Previous Jumma Time is: @Model.Jumma</b></p>
+
+    Jumma:
+    Hours:
+    <select name="JummaHours">
+        @{
+            for (int i = 0; i <= 12; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+    Minutes:
+    <select name="JummaMinutes">
+        @{
+            for (int i = 0; i < 60; i++)
+            {
+                if (i.ToString().Length == 1)
+                {
+                    string n = "0" + i.ToString();
+                    <option name="@n">@n</option>
+                }
+                else
+                {
+                    <option name="@i">@i</option>
+                }
+            }
+
+        }
+    </select>
+
+    <select name="JummaMeridium">
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+    <br />
+    <br />
+    <input class="Button" type="submit" value="Click here to Submit Changes" />
+    </form>
+

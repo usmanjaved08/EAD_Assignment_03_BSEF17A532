@@ -1,0 +1,46 @@
+﻿@model IEnumerable<EAD_Assignment_No_3.Models.MosqueList>
+@{
+    ViewBag.Title = "Category";
+}
+
+<h2>This is list of Mosques for the Area you Selected</h2>
+
+<table style="width:100%" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Address</th>
+        <th>Fajar</th>
+        <th>Zuhar</th>
+        <th>Asar</th>
+        <th>Maghrib</th>
+        <th>Isha</th>
+        <th>Jumma</th>
+        <th>Edit</th>
+    </tr>
+
+    @{ foreach (var a in Model)
+        {
+            <tr>
+                <td>@a.Id</td>
+                <td>@a.Name</td>
+                <td>@a.Area</td>
+                <td>@a.Address</td>
+                <td>@a.Fajar</td>
+                <td>@a.Zuhar</td>
+                <td>@a.Asar</td>
+                <td>@a.Maghrib</td>
+                <td>@a.Isha</td>
+                <td>@a.Jumma</td>
+                <td><a href="/home/EditMosque/@a.Id">Edit</a></td>
+                 
+            </tr>
+            
+
+
+        }
+
+    }
+
+</table>

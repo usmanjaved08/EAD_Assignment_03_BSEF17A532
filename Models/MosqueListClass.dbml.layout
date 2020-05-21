@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MosqueListClass">
+  <DataContextMoniker Name="/MosqueListClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c910991d-e5f2-4015-acbc-8e8700be33b5" absoluteBounds="3.125, 1.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MosqueListClassDataContext/MosqueList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf58cd16-af5c-4aa2-bbfe-18788b4d6c4d" absoluteBounds="3.14, 1.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
